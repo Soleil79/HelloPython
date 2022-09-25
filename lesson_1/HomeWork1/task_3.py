@@ -10,7 +10,7 @@ print('введите y ')
 y = int(input()) 
 if x==0 or y ==0:
     print('Error, 0 entered!')
-elif x and y > 0:
+elif x>0 and y>0:
      print('1 четверть')
 elif x<0 and y>0: 
     print ('2 четверть')

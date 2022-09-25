@@ -2,7 +2,7 @@
 
 print('введите день недели ')
 day = int(input()) 
-if day in range(6):
+if day in range(1,6):
      print('Workday')
 elif day in range(6,8): 
     print ('Weekend')
