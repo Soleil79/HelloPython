@@ -18,7 +18,7 @@
 # Напишите программу, которая определит индекс второго вхождения строки в списке
 # либо сообщит, что её нет.
 
-from random import choices
+from random import choices, sample
 
 def list_new(n, word):
     new_list = []
@@ -37,3 +37,5 @@ def list_search(my_list, key):
 result=list_new(10, 'abc')
 print(result)
 list_search(result, input())
+
+sample
