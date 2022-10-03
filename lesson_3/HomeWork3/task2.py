@@ -12,7 +12,6 @@
 # [2, 2, 4, 8, 8]
 # [16, 16, 4]
 
-from ast import Try
 from random import sample
 
 def Products (count):

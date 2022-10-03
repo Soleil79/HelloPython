@@ -12,7 +12,7 @@
 # [9.26, 8.5, 1.14]
 # Min: 0.14, Max: 0.5. Difference: 0.36
 
-from random import random, sample
+from random import random
 
 def checkNum(inputText):
     OK = False
