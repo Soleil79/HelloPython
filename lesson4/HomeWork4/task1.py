@@ -13,17 +13,7 @@
 
 from decimal import Decimal
 
-def Change():
-    
-    list = [input('Введите точность в формате 0.0001: ')] 
-    ll = len(list)
-    temp = list[ll-1]
-    list[ll-1] = list[0]
-    list[0] = temp
-    accur = Decimal(''.join(map(str, list)))
-    return accur
-
 num = Decimal(input('Введите число: '))
-accuracy = Change()
+accuracy = Decimal(input('Введите точность: '))
 num = num.quantize(Decimal(accuracy))
 print(num)
