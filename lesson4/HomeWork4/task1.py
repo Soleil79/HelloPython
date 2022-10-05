@@ -14,7 +14,7 @@
 from decimal import Decimal
 
 def Change():
-    # accuracy = input('Введите точность: ')
+    
     list = [input('Введите точность в формате 0.0001: ')] 
     ll = len(list)
     temp = list[ll-1]
