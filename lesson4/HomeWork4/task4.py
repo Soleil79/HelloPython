@@ -22,33 +22,63 @@
 # 2*x^4 - 3*x^3 + 3*x^2 + 1*x^1 - 2 = 0
 
 
-from random import randint
+from random import randint, choice
+import weakref
 
 def checkNum(inputText):
     OK = False
     while not OK:
         try:
             number = int(input(f'{inputText}'))
-            if number < 0:
-                print('Negative value of the number of numbers!')
-                quit()
             OK = True
         except ValueError:
             print('Error') 
         
     return number
 
-def fillList(num):
-    for i in range(num):
-        new_coenf = randint(-10, 10) in range(num) 
-        
+def Polinomial(num):
+    with open('poli.txt', 'a', encoding='utf-8') as my_file:       
+        for i in range(num+1): 
+            new_coenf = randint(0, 10)
+            sign = choice('+-')
+            if num >= 1:                
+                if new_coenf != 0:
+                    my_file.write(f'{new_coenf}*x^{num} {sign} ')
+                    num -= 1
+                else:
+                    my_file.write(f'')
+                    num -= 1
+            else:
+                my_file.write(f'{new_coenf} = 0\n')
+                
+        my_file.write('')
 
-      
+def Polinomial2(num): # Для создания второго файла
+    with open('poli2.txt', 'a', encoding='utf-8') as my_file2:       
+        for i in range(num+1): 
+            new_coenf = randint(0, 10)
+            sign = choice('+-')
+            if num >= 1:                
+                if new_coenf != 0:
+                    my_file2.write(f'{new_coenf}*x^{num} {sign} ')
+                    num -= 1
+                else:
+                    my_file2.write(f'')
+                    num -= 1
+            else:
+                my_file2.write(f'{new_coenf} = 0\n')
+                
+        my_file2.write('')
+
+print('создадим первый файл:')
+for i in range(3):           
+    number = int(checkNum('Введите степень k: '))
+    Polinomial(number)
     
-num = int(checkNum('Введите степень k: '))
-new_coenf = randint(-10, 10) in range(num)   # Первый список (еще можно было choices(range(10), k=num))
-print(new_coenf*x^num, + )
-new_list = fillList(my_list)
-print(new_list)
+print()
 
-# a, b, c = (int(input()) for _ in range(3))
+print('создадим второй файл:')
+for i in range(3):      # Для создания второго файла     
+    number2 = int(checkNum('Введите степень k: '))
+    Polinomial2(number2)
+    
