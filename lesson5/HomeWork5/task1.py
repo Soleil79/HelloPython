@@ -41,8 +41,3 @@ WordList=FillList(count, 'абв')
 print(WordList)
 print(DeleteWord(WordList))
 
-# num = int(checkNum('Введите количество элементов списка: '))
-# my_list = [randint(1, num) for x in range(num)]   # Первый список (еще можно было choices(range(10), k=num))
-# print(my_list)
-# new_list = fillList(my_list)
-# print(new_list)
